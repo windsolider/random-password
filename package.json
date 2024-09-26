@@ -1,0 +1,18 @@
+{
+    "name": "random-password",
+    "version": "0.1",
+    "description": "Generate random passwords, special characters, uppercase letters, lowercase letters, numbers optional",
+    "keywords": [
+        "random",
+        "password"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/windsolider/random-password.git"
+    },
+    "dependencies": {},
+    "devDependencies": {},
+    "scripts": {},
+    "author": "windsolider",
+    "license": "MPL-2.0"
+}
