@@ -1,4 +1,20 @@
 function generatePassword(len = 8,useLowercase = true, useUppercase = true, useNumbers = true, useSymbols = false) {
+    if (typeof len !== 'number') {
+        throw new Error('Invalid length');
+    }
+
+    if (typeof useLowercase !== 'boolean') {
+        throw new Error('Invalid useLowercase');
+    }
+    if (typeof useUppercase !== 'boolean') {
+        throw new Error('Invalid useUppercase');
+    }
+    if (typeof useNumbers !== 'boolean') {
+        throw new Error('Invalid useNumbers');
+    }
+    if (typeof useSymbols !== 'boolean') {
+        throw new Error('Invalid useSymbols');
+    }
     const lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz';
     const uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const numbers = '0123456789';
@@ -50,6 +66,9 @@ function getRandomBooleanWithRatio(ratio = 0.5) {
 }
 
 function generatePassword3(len=8) {
+    if (typeof len !== 'number') {
+        throw new Error('Invalid length');
+    }
     let useNumbers = getRandomBooleanWithRatio();
     let useSymbols = !useNumbers;
     return generatePassword(len,true,true,useNumbers,useSymbols)
@@ -59,4 +78,4 @@ function generatePassword3(len=8) {
 export {
     generatePassword,
     generatePassword3
-};
+}
