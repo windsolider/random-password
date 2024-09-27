@@ -1,4 +1,4 @@
-function generatePassword(len = 8,useLowercase = true, useUppercase = true, useNumbers = true, useSymbols = false) {
+function generatePassword(len = 8,useLowercase = true, useUppercase = true, useNumbers = true, useSymbols = true) {
     if (typeof len !== 'number') {
         throw new Error('Invalid length');
     }
