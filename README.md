@@ -10,11 +10,17 @@ npm install random-1password
 ```
 import {generatePassword,generatePassword3} from 'random-1password';
 
+// 得到一个长度8位的包含大小写字母、数字或特殊字符(!@#$%^&*()_+-=[]{}|;:,.<>?)的字符串
+const pwd = generatePassword3();
+
 // 得到一个长度9位的包含大小写字母、数字或特殊字符(!@#$%^&*()_+-=[]{}|;:,.<>?)的字符串
 const pwd = generatePassword3(9);
 
 // 得到一个长度11位的包含大小写字母、数字或特殊字符(!@#$%^&*()_+-=[]{}|;:,.<>?)的字符串
 const pwd = generatePassword3(11);
+
+// 得到一个长度8位的包含大小写字母、数字、特殊字符(!@#$%^&*()_+-=[]{}|;:,.<>?)的字符串
+const pwd = generatePassword();
 
 // 得到一个长度9位的包含大小写字母、数字、特殊字符(!@#$%^&*()_+-=[]{}|;:,.<>?)的字符串
 const pwd = generatePassword(9)
