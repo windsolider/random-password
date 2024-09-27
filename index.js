@@ -56,10 +56,10 @@ function shuffleArray(array) {
 }
 
 function getRandomBooleanWithRatio(ratio = 0.5) {
-    if (isNaN(parseFloat(ratio,10))) {
+    if (isNaN(parseFloat(ratio))) {
         throw new Error('Invalid ratio');
     }
-    if (parseFloat(ratio,10) > 1 || parseFloat(ratio,10) < 0) {
+    if (parseFloat(ratio) > 1 || parseFloat(ratio) < 0) {
         throw new Error('Ratio is between 0 and 1');
     }
     return Math.random() < ratio;  // 默认50%的概率返回true
