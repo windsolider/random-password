@@ -4,7 +4,6 @@ Generate random passwords, special characters, uppercase letters, lowercase lett
 # Install
 ```
 npm install random-1password
-
 ```
 
 # Example
@@ -13,6 +12,7 @@ import {generatePassword,generatePassword3} from 'random-1password';
 
 // 得到一个长度9位的包含大小写字母、数字或特殊字符的字符串
 const pwd = generatePassword3(9);
+
 // 得到一个长度11位的包含大小写字母、数字或特殊字符的字符串
 const pwd = generatePassword3(11);
 
