@@ -2,6 +2,7 @@
     "name": "random-password",
     "version": "0.1",
     "description": "Generate random passwords, special characters, uppercase letters, lowercase letters, numbers optional",
+    "main": "./index.js",
     "keywords": [
         "random",
         "password"
