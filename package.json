@@ -1,5 +1,5 @@
 {
-    "name": "random-password",
+    "name": "random-1password",
     "version": "0.0.1",
     "description": "Generate random passwords, special characters, uppercase letters, lowercase letters, numbers optional",
     "main": "./index.js",
