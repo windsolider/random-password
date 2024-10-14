@@ -7,7 +7,29 @@ class Strength {
     }
     check() {
         let score = 0;
-
+        score += this.calculateScore("passwordLength");
+        score += this.calculateScore("numbers");
+        score += this.calculateScore("symbols");
+        score += this.calculateScore("uppercaseLowercase");
+        score += this.calculateScore("numbersChars");
+        score += this.calculateScore("numbersSymbols");
+        score += this.calculateScore("symbolsChars");
+        score += this.calculateScore("onlyChars");
+        score += this.calculateScore("onlyNumbers");
+        score += this.calculateScore("duplicates");
+        this.score = score = score <0 ? 0 : score > 100 ? 100 : score;
+        if (score < 35) {
+            this.status = "weak";
+        }
+    
+        if (score >= 35 && score < 60) {
+            this.status = "good";
+        }
+    
+        if (score >= 70) {
+            this.status = "strong";
+        }
+        return this.score
     }
     calculateScore(type) {
         let score = 0;
@@ -54,23 +76,27 @@ class Strength {
                     score = -15;
                 }
             break;
-            case "only_numbers":
+            case "onlyNumbers":
                 if (this.password.match(/^\d+$/i)) {
                     score = -15;
                 }
             break;
-            case "sequences":
-                score += -15 * this.sequences(this.password);
-                score += -15 * this.sequences(this.reversed(this.password));
+            case "duplicates":
+                score += -15 * Object.keys(this.findConsecutiveDuplicates(this.password)).length;
             break;
-            case "repetitions":
-                score += -(this.repetitions(this.password, 2) * 4);
-                score += -(this.repetitions(this.password, 3) * 3);
-                score += -(this.repetitions(this.password, 4) * 2);
-            break; 
         }
+    }
+
+    findConsecutiveDuplicates(text) {
+        const matches = text.match(/(\w+)\1+/g) || [];
+        return matches.reduce((init,current)=>{
+            init[current] = current.length
+            return init
+        },{});
     }
     usesCommonWord() {
         return COMMON_PASSWORDS.indexOf(this.password.toLowerCase()) >= 0;
     }
 }
+
+export default Strength
