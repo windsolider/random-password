@@ -3,6 +3,7 @@
     "version": "0.0.2",
     "description": "Generate random passwords, special characters, uppercase letters, lowercase letters, numbers optional",
     "main": "./index.js",
+    "type": "module",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
