@@ -29,7 +29,7 @@ class Strength {
         if (score >= 70) {
             this.status = "strong";
         }
-        return this.score
+        return this.status
     }
     calculateScore(type) {
         let score = 0;
