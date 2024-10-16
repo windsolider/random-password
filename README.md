@@ -8,11 +8,11 @@ npm install random-1password
 
 # Example
 ```
-import {RandomPassword} from 'random-1password';
+import RandomPassword from 'random-1password';
 
 // 得到一个长度8位的包含大小写字母、数字、特殊字符(!@#$%^&*()_+-=[]{}|;:,.<>?)的字符串
 const rpd = new RandomPassword();
-rpd.generate();
+const pwd = rpd.generate();
 
 // 得到一个长度9位的包含大小写字母、数字、特殊字符(!@#$%^&*()_+-=[]{}|;:,.<>?)的字符串
 const rpd = new RandomPassword();

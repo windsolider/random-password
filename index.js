@@ -1,4 +1,4 @@
-import Strength from 'strength.js';
+import Strength from './strength.js';
 class RandomPassword {
     constructor() {
 
@@ -71,4 +71,5 @@ class RandomPassword {
         return status
     }
 }
+
 export default RandomPassword
