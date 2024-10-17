@@ -1,4 +1,4 @@
-import {COMMON_PASSWORDS,MULTIPLE_NUMBERS_RE,MULTIPLE_SYMBOLS_RE,UPPERCASE_LOWERCASE_RE,SYMBOL_RE} from './constants.js';
+import {COMMON_PASSWORDS,KEYBORD_PASSWORDS,NUMBERS_PASSWORDS,MULTIPLE_NUMBERS_RE,MULTIPLE_SYMBOLS_RE,UPPERCASE_LOWERCASE_RE,SYMBOL_RE} from './constants.js';
 class Strength {
     constructor(pwd) {
         this.password = pwd;
@@ -95,7 +95,7 @@ class Strength {
         },{});
     }
     usesCommonWord() {
-        return COMMON_PASSWORDS.indexOf(this.password.toLowerCase()) >= 0;
+        return COMMON_PASSWORDS.indexOf(this.password.toLowerCase()) >= 0 || KEYBORD_PASSWORDS.indexOf(this.password.toLowerCase()) >= 0 || NUMBERS_PASSWORDS.indexOf(this.password.toLowerCase()) >= 0;
     }
 }
 
