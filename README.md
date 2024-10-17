@@ -32,7 +32,7 @@ const pwd = rpd.generate(9,useLowercase,useUppercase,useNumbers,useSymbols);
 const rpd = new RandomPassword();
 let useLowercase = false, useUppercase = true, useNumbers = false, useSymbols = false;
 const pwd = rpd.generate(9,useLowercase,useUppercase,useNumbers,useSymbols);
-```
+
 // 密码强弱度检查
 const rpd = new RandomPassword();
 const pwd = "4uqGKSMl,M@b";
